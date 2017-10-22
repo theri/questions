@@ -1,0 +1,224 @@
+
+
+
+
+TAPS Working Group                                           B. Trammell
+Internet-Draft                                                ETH Zurich
+Intended status: Informational                          October 22, 2017
+Expires: April 25, 2018
+
+
+                Open Questions in Path Aware Networking
+                 draft-trammell-panrg-questions-latest
+
+Abstract
+
+   write me
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on April 25, 2018.
+
+Copyright Notice
+
+   Copyright (c) 2017 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents
+   (https://trustee.ietf.org/license-info) in effect on the date of
+   publication of this document.  Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+   to this document.  Code Components extracted from this document must
+   include Simplified BSD License text as described in Section 4.e of
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
+
+
+
+
+
+
+
+Trammell                 Expires April 25, 2018                 [Page 1]
+
+Internet-Draft                PAN questions                 October 2017
+
+
+Table of Contents
+
+   1.  Introduction to Path-Aware Networking . . . . . . . . . . . .   2
+   2.  Questions . . . . . . . . . . . . . . . . . . . . . . . . . .   2
+     2.1.  A Vocabulary of Path Properties . . . . . . . . . . . . .   3
+     2.2.  Discovery and Dissemination of Path Properties  . . . . .   3
+     2.3.  Authentication and Trustworthiness of Path Properties . .   3
+     2.4.  Supporting Path Selection . . . . . . . . . . . . . . . .   3
+     2.5.  Authentication and Authorization of Path Selection  . . .   3
+     2.6.  Interfaces for Path Awareness . . . . . . . . . . . . . .   3
+     2.7.  Economics of Path Aware Internetworking . . . . . . . . .   3
+   3.  Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .   3
+   4.  Normative References  . . . . . . . . . . . . . . . . . . . .   3
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+
+1.  Introduction to Path-Aware Networking
+
+   In the current Internet architecture, the network layer provides an
+   unverifiable, best-effort service: an application can assume that a
+   packet with a given destination address will eventually be forwarded
+   toward that destination, but little else.  A transport layer protocol
+   such as TCP can provide reliability over this best-effort service,
+   and a protocol above the network layer such as IPsec AH [RFC4302] or
+   TLS [RFC5246] can authenticate the remote endpoint.  However, no
+   explicit information about the path is available, and assumptions
+   about that path sometimes do not hold, sometimes with serious impacts
+   on the application, as in the case with BGP hijacking attacks.
+
+   By contrast, in a path-aware networking architecture, endpoints have
+   the ability to select or influence the path through the network used
+   by any given packet, and the network layer explicitly exposes
+   information about the path or paths available between two endpoints
+   to those endpoints so that they can make this selection.  Path
+   control at the packet level enables new transport protocols that can
+   leverage multipath connectivity even over a single interface.
+
+2.  Questions
+
+   Realizing path-aware networking requires answers to a set of open
+   research questions.  This document poses these questions, as a
+   starting point for discussions about how to realize path awareness in
+   the Internet, and to direct future research efforts within the Path
+   Aware Networking Research Group.
+
+
+
+
+
+
+
+
+Trammell                 Expires April 25, 2018                 [Page 2]
+
+Internet-Draft                PAN questions                 October 2017
+
+
+2.1.  A Vocabulary of Path Properties
+
+   write me
+
+2.2.  Discovery and Dissemination of Path Properties
+
+   write me
+
+2.3.  Authentication and Trustworthiness of Path Properties
+
+   write me
+
+2.4.  Supporting Path Selection
+
+   write me
+
+2.5.  Authentication and Authorization of Path Selection
+
+   write me
+
+2.6.  Interfaces for Path Awareness
+
+   write me
+
+2.7.  Economics of Path Aware Internetworking
+
+   write me
+
+3.  Acknowledgments
+
+   Many thanks to... write me
+
+   This work is partially supported by the European Commission under
+   Horizon 2020 grant agreement no. 688421 Measurement and Architecture
+   for a Middleboxed Internet (MAMI), and by the Swiss State Secretariat
+   for Education, Research, and Innovation under contract no. 15.0268.
+   This support does not imply endorsement.
+
+4.  Normative References
+
+   [RFC4302]  Kent, S., "IP Authentication Header", RFC 4302,
+              DOI 10.17487/RFC4302, December 2005,
+              <https://www.rfc-editor.org/info/rfc4302>.
+
+   [RFC5246]  Dierks, T. and E. Rescorla, "The Transport Layer Security
+              (TLS) Protocol Version 1.2", RFC 5246,
+              DOI 10.17487/RFC5246, August 2008,
+              <https://www.rfc-editor.org/info/rfc5246>.
+
+
+
+Trammell                 Expires April 25, 2018                 [Page 3]
+
+Internet-Draft                PAN questions                 October 2017
+
+
+Author's Address
+
+   Brian Trammell
+   ETH Zurich
+   Gloriastrasse 35
+   8092 Zurich
+   Switzerland
+
+   Email: ietf@trammell.ch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Trammell                 Expires April 25, 2018                 [Page 4]
