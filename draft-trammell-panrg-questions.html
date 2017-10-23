@@ -278,12 +278,10 @@ address {
 <link href="#rfc.section.1" rel="Chapter" title="1 Introduction to Path-Aware Networking">
 <link href="#rfc.section.2" rel="Chapter" title="2 Questions">
 <link href="#rfc.section.2.1" rel="Chapter" title="2.1 A Vocabulary of Path Properties">
-<link href="#rfc.section.2.2" rel="Chapter" title="2.2 Discovery and Dissemination of Path Properties">
-<link href="#rfc.section.2.3" rel="Chapter" title="2.3 Authentication and Trustworthiness of Path Properties">
-<link href="#rfc.section.2.4" rel="Chapter" title="2.4 Supporting Path Selection">
-<link href="#rfc.section.2.5" rel="Chapter" title="2.5 Authentication and Authorization of Path Selection">
-<link href="#rfc.section.2.6" rel="Chapter" title="2.6 Interfaces for Path Awareness">
-<link href="#rfc.section.2.7" rel="Chapter" title="2.7 Economics of Path Aware Internetworking">
+<link href="#rfc.section.2.2" rel="Chapter" title="2.2 Discovery, Distribution, and Trustworthiness of Path Properties">
+<link href="#rfc.section.2.3" rel="Chapter" title="2.3 Supporting Path Selection">
+<link href="#rfc.section.2.4" rel="Chapter" title="2.4 Interfaces for Path Awareness">
+<link href="#rfc.section.2.5" rel="Chapter" title="2.5 Operating a Path Aware Network">
 <link href="#rfc.section.3" rel="Chapter" title="3 Acknowledgments">
 <link href="#rfc.references" rel="Chapter" title="4 Normative References">
 <link href="#rfc.authors" rel="Chapter">
@@ -294,7 +292,7 @@ address {
 
   <meta name="dct.creator" content="Trammell, B." />
   <meta name="dct.identifier" content="urn:ietf:id:draft-trammell-panrg-questions-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2017-10-22" />
+  <meta name="dct.issued" scheme="ISO8601" content="2017-10-23" />
   <meta name="dct.abstract" content="write me" />
   <meta name="description" content="write me" />
 
@@ -306,7 +304,7 @@ address {
     <tbody>
     
     	<tr>
-<td class="left">TAPS Working Group</td>
+<td class="left">Path Aware Networking RG</td>
 <td class="right">B. Trammell</td>
 </tr>
 <tr>
@@ -315,10 +313,10 @@ address {
 </tr>
 <tr>
 <td class="left">Intended status: Informational</td>
-<td class="right">October 22, 2017</td>
+<td class="right">October 23, 2017</td>
 </tr>
 <tr>
-<td class="left">Expires: April 25, 2018</td>
+<td class="left">Expires: April 26, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -335,7 +333,7 @@ address {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on April 25, 2018.</p>
+<p>This Internet-Draft will expire on April 26, 2018.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2017 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -351,17 +349,13 @@ address {
 </li>
 <ul><li>2.1.   <a href="#rfc.section.2.1">A Vocabulary of Path Properties</a>
 </li>
-<li>2.2.   <a href="#rfc.section.2.2">Discovery and Dissemination of Path Properties</a>
+<li>2.2.   <a href="#rfc.section.2.2">Discovery, Distribution, and Trustworthiness of Path Properties</a>
 </li>
-<li>2.3.   <a href="#rfc.section.2.3">Authentication and Trustworthiness of Path Properties</a>
+<li>2.3.   <a href="#rfc.section.2.3">Supporting Path Selection</a>
 </li>
-<li>2.4.   <a href="#rfc.section.2.4">Supporting Path Selection</a>
+<li>2.4.   <a href="#rfc.section.2.4">Interfaces for Path Awareness</a>
 </li>
-<li>2.5.   <a href="#rfc.section.2.5">Authentication and Authorization of Path Selection</a>
-</li>
-<li>2.6.   <a href="#rfc.section.2.6">Interfaces for Path Awareness</a>
-</li>
-<li>2.7.   <a href="#rfc.section.2.7">Economics of Path Aware Internetworking</a>
+<li>2.5.   <a href="#rfc.section.2.5">Operating a Path Aware Network</a>
 </li>
 </ul><li>3.   <a href="#rfc.section.3">Acknowledgments</a>
 </li>
@@ -385,35 +379,34 @@ address {
 <h1 id="rfc.section.2.1">
 <a href="#rfc.section.2.1">2.1.</a> <a href="#a-vocabulary-of-path-properties" id="a-vocabulary-of-path-properties">A Vocabulary of Path Properties</a>
 </h1>
-<p id="rfc.section.2.1.p.1">write me</p>
+<p id="rfc.section.2.1.p.1">In order for information about paths to be exposed to the endpoints, and for those endpoints to be able to use that information, it is necessary to define a common vocabulary for path properties. The elements of this vocabulary could include relatively static properties, such as the presence of a given node on the path; as well as relatively dynamic properties, such as the current values of metrics such as loss and latency.</p>
+<p id="rfc.section.2.1.p.2">This vocabulary must be defined carefully, as its design will have impacts on the expressiveness of a given path-aware internetworking architecture. This expressiveness also exhibits tradeoffs. For example, a system that exposes node-level information for the topology through each network would maximize information about the individual components of the path at the endpoints at the expense of making internal network topology universally public, which may be in conflict with the business goals of each network&#8217;s operator.</p>
+<p id="rfc.section.2.1.p.3">The first question is therefore: how are path properties defined and represented?</p>
 <h1 id="rfc.section.2.2">
-<a href="#rfc.section.2.2">2.2.</a> <a href="#discovery-and-dissemination-of-path-properties" id="discovery-and-dissemination-of-path-properties">Discovery and Dissemination of Path Properties</a>
+<a href="#rfc.section.2.2">2.2.</a> <a href="#discovery-distribution-and-trustworthiness-of-path-properties" id="discovery-distribution-and-trustworthiness-of-path-properties">Discovery, Distribution, and Trustworthiness of Path Properties</a>
 </h1>
-<p id="rfc.section.2.2.p.1">write me</p>
+<p id="rfc.section.2.2.p.1">Once endpoints and networks have a shared vocabulary for expressing path properties, the network must have some method for distributing those path properties to the endpoint. Regardless of how path property information is distributed to the endpoints, the endpoints require a method to authenticate the properties &#8211; to determine that they originated from and pertain to the path that they purport to. The end goal of authentication is not necessarily to establish that a given property is actually bound to a given path, but to ensure that the information is trustworthy, that actions taken based on it will have the predicted result.</p>
+<p id="rfc.section.2.2.p.2">Choices in an distribution and authentication methods will have impacts on the scalability of a path-aware architecture. Possible dimensions in the space of distribution methods include in-band versus out-of-band, push versus pull versus publish-subscribe, and so on. There are temporal issues with path property dissemination as well, especially with dynamic properties, since the measurement or elicitation of dynamic properties may be outdated by the time that information is available at the endpoints, and interactions between the measurement and dissemination delay may exhibit pathological behavior for unlucky points in the parameter space.</p>
+<p id="rfc.section.2.2.p.3">The second question: how do endpoints get access to trustworthy path properties?</p>
 <h1 id="rfc.section.2.3">
-<a href="#rfc.section.2.3">2.3.</a> <a href="#authentication-and-trustworthiness-of-path-properties" id="authentication-and-trustworthiness-of-path-properties">Authentication and Trustworthiness of Path Properties</a>
+<a href="#rfc.section.2.3">2.3.</a> <a href="#supporting-path-selection" id="supporting-path-selection">Supporting Path Selection</a>
 </h1>
-<p id="rfc.section.2.3.p.1">write me</p>
+<p id="rfc.section.2.3.p.1">Access to trustworthy path properties is only half of the challenge in establishing a path-aware architecture. Endpoints must be able to use this information in order to select paths for traffic they send. As with path property distribution, choices made in path selection methods will also have an impact on the scalability and expressiveness of a path-aware architecture, and dimensions included in-band versus out-of-band, as well. Paths may also be selected on multiple levels of granularity &#8211; per packet, per flow, per aggregate &#8211; and this choice also has impacts on the scalabilty/expressiveness tradeoff.</p>
+<p id="rfc.section.2.3.p.2">The third question: how can endpoints select paths to use for traffic in a way that can be trusted by the network?</p>
 <h1 id="rfc.section.2.4">
-<a href="#rfc.section.2.4">2.4.</a> <a href="#supporting-path-selection" id="supporting-path-selection">Supporting Path Selection</a>
+<a href="#rfc.section.2.4">2.4.</a> <a href="#interfaces-for-path-awareness" id="interfaces-for-path-awareness">Interfaces for Path Awareness</a>
 </h1>
-<p id="rfc.section.2.4.p.1">write me</p>
+<p id="rfc.section.2.4.p.1">Exposing path selection and path properties only to the endpoint is not sufficient to allow the deployment of path-aware transport protocols and applications: the interfaces presented by the network and transport layers must also expose path properties in a useful way, and provide a useful selection for path selection.</p>
+<p id="rfc.section.2.4.p.2">The fourth question: how can interfaces to the transport and application layers support the use of path awareness?</p>
 <h1 id="rfc.section.2.5">
-<a href="#rfc.section.2.5">2.5.</a> <a href="#authentication-and-authorization-of-path-selection" id="authentication-and-authorization-of-path-selection">Authentication and Authorization of Path Selection</a>
+<a href="#rfc.section.2.5">2.5.</a> <a href="#operating-a-path-aware-network" id="operating-a-path-aware-network">Operating a Path Aware Network</a>
 </h1>
-<p id="rfc.section.2.5.p.1">write me</p>
-<h1 id="rfc.section.2.6">
-<a href="#rfc.section.2.6">2.6.</a> <a href="#interfaces-for-path-awareness" id="interfaces-for-path-awareness">Interfaces for Path Awareness</a>
-</h1>
-<p id="rfc.section.2.6.p.1">write me</p>
-<h1 id="rfc.section.2.7">
-<a href="#rfc.section.2.7">2.7.</a> <a href="#economics-of-path-aware-internetworking" id="economics-of-path-aware-internetworking">Economics of Path Aware Internetworking</a>
-</h1>
-<p id="rfc.section.2.7.p.1">write me</p>
+<p id="rfc.section.2.5.p.1">The network operations model in the current Internet architecture assumes that traffic flows are controlled by the decisions and policies made by network operators, as expressed in interdomain routing protocols. In a path-aware network with effective path selection, however, this assumption no longer holds, as endpoints may react to path properties by selecting alternate paths.  Competing control inputs from path-aware endpoints and the interdomain routing control plane may lead to more difficult traffic engineering or nonconvergent routing, especially if the endpoints&#8217; and operators&#8217; idea of the &#8220;best&#8221; path for given traffic differs significantly.</p>
+<p id="rfc.section.2.5.p.2">The fifth question: how can a path aware network in a path aware internetwork be effectively operated?</p>
 <h1 id="rfc.section.3">
 <a href="#rfc.section.3">3.</a> <a href="#acknowledgments" id="acknowledgments">Acknowledgments</a>
 </h1>
-<p id="rfc.section.3.p.1">Many thanks to&#8230; write me</p>
+<p id="rfc.section.3.p.1">Many thanks to Adrian Perrig, Jean-Pierre Smith, Mirja Kuehlewind, and Olivier Bonaventure, for discussions leading to questions in this document.</p>
 <p id="rfc.section.3.p.2">This work is partially supported by the European Commission under Horizon 2020 grant agreement no. 688421 Measurement and Architecture for a Middleboxed Internet (MAMI), and by the Swiss State Secretariat for Education, Research, and Innovation under contract no. 15.0268. This support does not imply endorsement.</p>
 <h1 id="rfc.references">
 <a href="#rfc.references">4.</a> Normative References</h1>
