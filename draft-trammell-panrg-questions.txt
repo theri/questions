@@ -68,7 +68,7 @@ Table of Contents
      2.3.  Supporting Path Selection . . . . . . . . . . . . . . . .   4
      2.4.  Interfaces for Path Awareness . . . . . . . . . . . . . .   4
      2.5.  Operating a Path Aware Network  . . . . . . . . . . . . .   4
-   3.  Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .   4
+   3.  Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .   5
    4.  Normative References  . . . . . . . . . . . . . . . . . . . .   5
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
 
@@ -188,11 +188,12 @@ Internet-Draft                PAN questions                 October 2017
 
 2.4.  Interfaces for Path Awareness
 
-   Exposing path selection and path properties only as far as the host
-   is not sufficient to allow the deployment of path-aware transport
-   protocols and applications: the interfaces presented by the network
-   and transport layers must also expose path properties in a useful
-   way, and provide a useful selection for path selection.
+   In order for applications to make effective use of a path-aware
+   networking architecture, the interfaces presented by the network and
+   transport layers must also expose path properties to the application
+   in a useful way, and provide a useful selection for path selection.
+   Path selection must be possible based not only on the preferences and
+   policies of the application developer, but of end-users as well.
 
    The fourth question: how can interfaces to the transport and
    application layers support the use of path awareness?
@@ -213,11 +214,10 @@ Internet-Draft                PAN questions                 October 2017
    The fifth question: how can a path aware network in a path aware
    internetwork be effectively operated?
 
-3.  Acknowledgments
 
-   Many thanks to Adrian Perrig, Jean-Pierre Smith, Mirja Kuehlewind,
-   and Olivier Bonaventure, for discussions leading to questions in this
-   document.
+
+
+
 
 
 
@@ -225,6 +225,12 @@ Trammell                 Expires April 27, 2018                 [Page 4]
 
 Internet-Draft                PAN questions                 October 2017
 
+
+3.  Acknowledgments
+
+   Many thanks to Adrian Perrig, Jean-Pierre Smith, Mirja Kuehlewind,
+   and Olivier Bonaventure, for discussions leading to questions in this
+   document.
 
    This work is partially supported by the European Commission under
    Horizon 2020 grant agreement no. 688421 Measurement and Architecture
@@ -252,12 +258,6 @@ Author's Address
    Switzerland
 
    Email: ietf@trammell.ch
-
-
-
-
-
-
 
 
 
