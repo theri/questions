@@ -4,8 +4,8 @@
 
 Path Aware Networking RG                                     B. Trammell
 Internet-Draft                                                ETH Zurich
-Intended status: Informational                          October 23, 2017
-Expires: April 26, 2018
+Intended status: Informational                          October 24, 2017
+Expires: April 27, 2018
 
 
                 Open Questions in Path Aware Networking
@@ -30,7 +30,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 26, 2018.
+   This Internet-Draft will expire on April 27, 2018.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Trammell                 Expires April 26, 2018                 [Page 1]
+Trammell                 Expires April 27, 2018                 [Page 1]
 
 Internet-Draft                PAN questions                 October 2017
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Trammell                 Expires April 26, 2018                 [Page 2]
+Trammell                 Expires April 27, 2018                 [Page 2]
 
 Internet-Draft                PAN questions                 October 2017
 
@@ -165,7 +165,7 @@ Internet-Draft                PAN questions                 October 2017
 
 
 
-Trammell                 Expires April 26, 2018                 [Page 3]
+Trammell                 Expires April 27, 2018                 [Page 3]
 
 Internet-Draft                PAN questions                 October 2017
 
@@ -188,8 +188,8 @@ Internet-Draft                PAN questions                 October 2017
 
 2.4.  Interfaces for Path Awareness
 
-   Exposing path selection and path properties only to the endpoint is
-   not sufficient to allow the deployment of path-aware transport
+   Exposing path selection and path properties only as far as the host
+   is not sufficient to allow the deployment of path-aware transport
    protocols and applications: the interfaces presented by the network
    and transport layers must also expose path properties in a useful
    way, and provide a useful selection for path selection.
@@ -221,7 +221,7 @@ Internet-Draft                PAN questions                 October 2017
 
 
 
-Trammell                 Expires April 26, 2018                 [Page 4]
+Trammell                 Expires April 27, 2018                 [Page 4]
 
 Internet-Draft                PAN questions                 October 2017
 
@@ -277,4 +277,4 @@ Author's Address
 
 
 
-Trammell                 Expires April 26, 2018                 [Page 5]
+Trammell                 Expires April 27, 2018                 [Page 5]
