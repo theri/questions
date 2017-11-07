@@ -4,8 +4,8 @@
 
 Path Aware Networking RG                                     B. Trammell
 Internet-Draft                                                ETH Zurich
-Intended status: Informational                          October 24, 2017
-Expires: April 27, 2018
+Intended status: Informational                         November 07, 2017
+Expires: May 11, 2018
 
 
                 Open Questions in Path Aware Networking
@@ -13,7 +13,11 @@ Expires: April 27, 2018
 
 Abstract
 
-   write me
+   This document poses open questions in path-aware networking, as a
+   background for framing discussions in the Path Aware Networking
+   proposed Research Group (PANRG).  These are split into making
+   properties of Internet paths available to endpoints, and allowing
+   endpoints to select paths through the Internet for their traffic.
 
 Status of This Memo
 
@@ -30,7 +34,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 27, 2018.
+   This Internet-Draft will expire on May 11, 2018.
 
 Copyright Notice
 
@@ -49,25 +53,22 @@ Copyright Notice
 
 
 
-
-
-
-
-Trammell                 Expires April 27, 2018                 [Page 1]
+Trammell                  Expires May 11, 2018                  [Page 1]
 
-Internet-Draft                PAN questions                 October 2017
+Internet-Draft                PAN questions                November 2017
 
 
 Table of Contents
 
    1.  Introduction to Path-Aware Networking . . . . . . . . . . . .   2
    2.  Questions . . . . . . . . . . . . . . . . . . . . . . . . . .   2
-     2.1.  A Vocabulary of Path Properties . . . . . . . . . . . . .   2
+     2.1.  A Vocabulary of Path Properties . . . . . . . . . . . . .   3
      2.2.  Discovery, Distribution, and Trustworthiness of Path
            Properties  . . . . . . . . . . . . . . . . . . . . . . .   3
      2.3.  Supporting Path Selection . . . . . . . . . . . . . . . .   4
      2.4.  Interfaces for Path Awareness . . . . . . . . . . . . . .   4
      2.5.  Operating a Path Aware Network  . . . . . . . . . . . . .   4
+     2.6.  Deploying a Path Aware Network  . . . . . . . . . . . . .   5
    3.  Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .   5
    4.  Normative References  . . . . . . . . . . . . . . . . . . . .   5
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
@@ -91,7 +92,11 @@ Table of Contents
    information about the path or paths available between two endpoints
    to those endpoints so that they can make this selection.  Path
    control at the packet level enables new transport protocols that can
-   leverage multipath connectivity even over a single interface.
+   leverage multipath connectivity across maximally-disjoing paths
+   through the Internet, even over a single interface.  It also provides
+   transparency and control for applications and end-users to specify
+   constraints on the paths its traffic should traverse, for instance to
+   confound pervasive passive surveillance in the network core.
 
 2.  Questions
 
@@ -101,19 +106,19 @@ Table of Contents
    the Internet, and to direct future research efforts within the Path
    Aware Networking Research Group.
 
+
+
+
+Trammell                  Expires May 11, 2018                  [Page 2]
+
+Internet-Draft                PAN questions                November 2017
+
+
 2.1.  A Vocabulary of Path Properties
 
    In order for information about paths to be exposed to the endpoints,
    and for those endpoints to be able to use that information, it is
    necessary to define a common vocabulary for path properties.  The
-
-
-
-Trammell                 Expires April 27, 2018                 [Page 2]
-
-Internet-Draft                PAN questions                 October 2017
-
-
    elements of this vocabulary could include relatively static
    properties, such as the presence of a given node on the path; as well
    as relatively dynamic properties, such as the current values of
@@ -160,14 +165,9 @@ Internet-Draft                PAN questions                 October 2017
 
 
 
-
-
-
-
-
-Trammell                 Expires April 27, 2018                 [Page 3]
+Trammell                  Expires May 11, 2018                  [Page 3]
 
-Internet-Draft                PAN questions                 October 2017
+Internet-Draft                PAN questions                November 2017
 
 
 2.3.  Supporting Path Selection
@@ -212,7 +212,8 @@ Internet-Draft                PAN questions                 October 2017
    idea of the "best" path for given traffic differs significantly.
 
    The fifth question: how can a path aware network in a path aware
-   internetwork be effectively operated?
+   internetwork be effectively operated, given control inputs from the
+   network administrator as well as from the endpoints?
 
 
 
@@ -220,17 +221,34 @@ Internet-Draft                PAN questions                 October 2017
 
 
 
-
-Trammell                 Expires April 27, 2018                 [Page 4]
+Trammell                  Expires May 11, 2018                  [Page 4]
 
-Internet-Draft                PAN questions                 October 2017
+Internet-Draft                PAN questions                November 2017
 
+
+2.6.  Deploying a Path Aware Network
+
+   The vision presented in the introduction discusses path aware
+   networking from the point of view of the benefits accruing at the
+   endpoints, to designers of transport protocols and applications as
+   well as to the end users of those applications.  However, this vision
+   requires action not only at the endpoints but within the
+   interconnected networks offering path aware connectivity.  While the
+   specific actions required are a matter of the design and
+   implementation of a specific realization of a path aware protocol
+   stack, it is clear than any path aware architecture will require
+   network operators to give up some control of their networks over to
+   endpoint-driven control inputs.  The incentives for network operators
+   and equipment vendors to do this must be made clear.
+
+   The sixth question: how can the incentives of network operators and
+   end-users be aligned to realize the vision of path aware networking?
 
 3.  Acknowledgments
 
    Many thanks to Adrian Perrig, Jean-Pierre Smith, Mirja Kuehlewind,
-   and Olivier Bonaventure, for discussions leading to questions in this
-   document.
+   Olivier Bonaventure, and Martin Thomson, for discussions leading to
+   questions in this document.
 
    This work is partially supported by the European Commission under
    Horizon 2020 grant agreement no. 688421 Measurement and Architecture
@@ -250,6 +268,19 @@ Internet-Draft                PAN questions                 October 2017
               <https://www.rfc-editor.org/info/rfc5246>.
 
 Author's Address
+
+
+
+
+
+
+
+
+
+Trammell                  Expires May 11, 2018                  [Page 5]
+
+Internet-Draft                PAN questions                November 2017
+
 
    Brian Trammell
    ETH Zurich
@@ -277,4 +308,29 @@ Author's Address
 
 
 
-Trammell                 Expires April 27, 2018                 [Page 5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Trammell                  Expires May 11, 2018                  [Page 6]
