@@ -72,10 +72,8 @@ Table of Contents
      2.7.  Operating a Path Aware Network  . . . . . . . . . . . . .   6
      2.8.  Deploying a Path Aware Network  . . . . . . . . . . . . .   6
    3.  Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .   7
-   4.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-     4.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
-     4.2.  Informative References  . . . . . . . . . . . . . . . . .   7
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
+   4.  Informative References  . . . . . . . . . . . . . . . . . . .   7
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   7
 
 1.  Introduction to Path-Aware Networking
 
@@ -106,6 +104,8 @@ Table of Contents
    We note that this property of "path awareness" already exists in many
    Internet-connected networks in an intradomain context.  Indeed, much
    of the practice of network engineering using encapsulation at layer 3
+   can be said to be "path aware", in that it explicitly assigns traffic
+   at tunnel endpoints to a given path within the network.  Path-aware
 
 
 
@@ -114,8 +114,6 @@ Trammell                Expires October 13, 2018                [Page 2]
 Internet-Draft                PAN questions                   April 2018
 
 
-   can be said to be "path aware", in that it explicitly assigns traffic
-   at tunnel endpoints to a given path within the network.  Path-aware
    internetworking seeks to extend this awareness across domain
    boundaries without resorting to overlays, except as a transition
    technology.
@@ -162,6 +160,8 @@ Internet-Draft                PAN questions                   April 2018
    on the scalability of a path-aware architecture.  Possible dimensions
    in the space of distribution methods include in-band versus out-of-
    band, push versus pull versus publish-subscribe, and so on.  There
+   are temporal issues with path property dissemination as well,
+   especially with dynamic properties, since the measurement or
 
 
 
@@ -170,8 +170,6 @@ Trammell                Expires October 13, 2018                [Page 3]
 Internet-Draft                PAN questions                   April 2018
 
 
-   are temporal issues with path property dissemination as well,
-   especially with dynamic properties, since the measurement or
    elicitation of dynamic properties may be outdated by the time that
    information is available at the endpoints, and interactions between
    the measurement and dissemination delay may exhibit pathological
@@ -216,6 +214,8 @@ Internet-Draft                PAN questions                   April 2018
 
    The fourth question: how can interfaces to the transport and
    application layers support the use of path awareness?
+
+
 
 
 
@@ -359,9 +359,7 @@ Internet-Draft                PAN questions                   April 2018
    for Education, Research, and Innovation under contract no. 15.0268.
    This support does not imply endorsement.
 
-4.  References
-
-4.1.  Normative References
+4.  Informative References
 
    [RFC4302]  Kent, S., "IP Authentication Header", RFC 4302,
               DOI 10.17487/RFC4302, December 2005,
@@ -371,8 +369,6 @@ Internet-Draft                PAN questions                   April 2018
               (TLS) Protocol Version 1.2", RFC 5246,
               DOI 10.17487/RFC5246, August 2008,
               <https://www.rfc-editor.org/info/rfc5246>.
-
-4.2.  Informative References
 
    [RFC7624]  Barnes, R., Schneier, B., Jennings, C., Hardie, T.,
               Trammell, B., Huitema, C., and D. Borkmann,
@@ -385,6 +381,10 @@ Internet-Draft                PAN questions                   April 2018
               Subsequent Transitions", RFC 8170, DOI 10.17487/RFC8170,
               May 2017, <https://www.rfc-editor.org/info/rfc8170>.
 
+Author's Address
+
+
+
 
 
 
@@ -394,8 +394,6 @@ Trammell                Expires October 13, 2018                [Page 7]
 Internet-Draft                PAN questions                   April 2018
 
 
-Author's Address
-
    Brian Trammell
    ETH Zurich
    Gloriastrasse 35
@@ -403,6 +401,8 @@ Author's Address
    Switzerland
 
    Email: ietf@trammell.ch
+
+
 
 
 
