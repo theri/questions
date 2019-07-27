@@ -277,8 +277,8 @@ ul.toc li {
   .github-fork-ribbon-wrapper {
     position: fixed;
   }
-  /*]]>*/</style>
-  <meta name="viewport" content="initial-scale=1.0">
+/*]]>*/</style>
+<meta name="viewport" content="initial-scale=1.0">
 
 
   <link href="#rfc.toc" rel="Contents">
@@ -299,14 +299,14 @@ ul.toc li {
 <link href="#rfc.authors" rel="Chapter">
 
 
-  <meta name="generator" content="xml2rfc version 2.22.2 - https://tools.ietf.org/tools/xml2rfc" />
+  <meta name="generator" content="xml2rfc version 2.22.1 - https://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
   <meta name="dct.creator" content="Trammell, B." />
   <meta name="dct.identifier" content="urn:ietf:id:draft-irtf-panrg-questions-latest" />
   <meta name="dct.issued" scheme="ISO8601" content="2019-07-27" />
-  <meta name="dct.abstract" content="This document poses open questions in path-aware networking, as a background for framing discussions in the Path Aware Networking proposed Research Group (PANRG). Path-aware networking has two aspects: the exposure of properties of available Internet paths to endpoints and applications running on them, and allowing endpoints and applications to use these properties to select paths through the Internet for their traffic." />
-  <meta name="description" content="This document poses open questions in path-aware networking, as a background for framing discussions in the Path Aware Networking proposed Research Group (PANRG). Path-aware networking has two aspects: the exposure of properties of available Internet paths to endpoints and applications running on them, and allowing endpoints and applications to use these properties to select paths through the Internet for their traffic." />
+  <meta name="dct.abstract" content="This document poses open questions in path-aware networking, as a background for framing discussions in the Path Aware Networking proposed Research Group (PANRG). Path-aware networking has two aspects: exposing properties of available Internet paths to endpoints and applications running on them, and allowing endpoints and applications to use these properties to select paths through the Internet for their traffic." />
+  <meta name="description" content="This document poses open questions in path-aware networking, as a background for framing discussions in the Path Aware Networking proposed Research Group (PANRG). Path-aware networking has two aspects: exposing properties of available Internet paths to endpoints and applications running on them, and allowing endpoints and applications to use these properties to select paths through the Internet for their traffic." />
 
 </head>
 
@@ -340,7 +340,7 @@ ul.toc li {
   <span class="filename">draft-irtf-panrg-questions-latest</span></p>
   
   <h1 id="rfc.abstract"><a href="#rfc.abstract">Abstract</a></h1>
-<p>This document poses open questions in path-aware networking, as a background for framing discussions in the Path Aware Networking proposed Research Group (PANRG). Path-aware networking has two aspects: the exposure of properties of available Internet paths to endpoints and applications running on them, and allowing endpoints and applications to use these properties to select paths through the Internet for their traffic.</p>
+<p>This document poses open questions in path-aware networking, as a background for framing discussions in the Path Aware Networking proposed Research Group (PANRG). Path-aware networking has two aspects: exposing properties of available Internet paths to endpoints and applications running on them, and allowing endpoints and applications to use these properties to select paths through the Internet for their traffic.</p>
 <h1 id="rfc.status"><a href="#rfc.status">Status of This Memo</a></h1>
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
@@ -444,12 +444,12 @@ ul.toc li {
 </h1>
 <p id="rfc.section.2.8.p.1">The vision presented in the introduction discusses path aware networking from the point of view of the benefits accruing at the endpoints, to designers of transport protocols and applications as well as to the end users of those applications. However, this vision requires action not only at the endpoints but within the interconnected networks offering path aware connectivity. While the specific actions required are a matter of the design and implementation of a specific realization of a path aware protocol stack, it is clear than any path aware architecture will require network operators to give up some control of their networks over to endpoint-driven control inputs.</p>
 <p id="rfc.section.2.8.p.2">Here the question of apparent versus actual conflicts of intent arises again: certain network operations requirements may appear essential, but are merely accidents of the interfaces provided by current routing and management protocols. Incentives for deployment must show how existing network operations requirements are met through new path selection and property dissemination mechanisms.</p>
-<p id="rfc.section.2.8.p.3">The incentives for network operators and equipment vendors to do provide  be made clear, in terms of a plan to transition <a href="#RFC8170" class="xref">[RFC8170]</a> an internetwork to path-aware operation, one network and facility at a time.</p>
-<p id="rfc.section.2.8.p.4">The eighth question: how can the incentives of network operators and end-users be aligned to realize the vision of path aware networking?</p>
+<p id="rfc.section.2.8.p.3">The incentives for network operators and equipment vendors need to be made clear, in terms of a plan to transition <a href="#RFC8170" class="xref">[RFC8170]</a> an internetwork to path-aware operation, one network and facility at a time. This plan to transition must also take into account that the dynamics of path aware networking early in this transition (when few endpoints and flows in the Internet use path selection) may be different than those later in the transition.</p>
+<p id="rfc.section.2.8.p.4">The eighth question: how can the incentives of network operators and end-users be aligned to realize the vision of path aware networking, and how can the transition from current (&#8220;path-oblivious&#8221;) to path-aware networking be managed?</p>
 <h1 id="rfc.section.3">
 <a href="#rfc.section.3">3.</a> <a href="#acknowledgments" id="acknowledgments">Acknowledgments</a>
 </h1>
-<p id="rfc.section.3.p.1">Many thanks to Adrian Perrig, Jean-Pierre Smith, Mirja Kuehlewind, Olivier Bonaventure, Martin Thomson, Shwetha Bhandari, Chris Wood, Lee Howard, and Mohamed Boucadair for discussions leading to questions in this document, and for feedback on the document itself.</p>
+<p id="rfc.section.3.p.1">Many thanks to Adrian Perrig, Jean-Pierre Smith, Mirja Kuehlewind, Olivier Bonaventure, Martin Thomson, Shwetha Bhandari, Chris Wood, Lee Howard, Mohamed Boucadair, and Thorben Krueger for discussions leading to questions in this document, and for feedback on the document itself.</p>
 <p id="rfc.section.3.p.2">This work is partially supported by the European Commission under Horizon 2020 grant agreement no. 688421 Measurement and Architecture for a Middleboxed Internet (MAMI), and by the Swiss State Secretariat for Education, Research, and Innovation under contract no. 15.0268. This support does not imply endorsement.</p>
 <h1 id="rfc.references">
 <a href="#rfc.references">4.</a> References</h1>
@@ -508,4 +508,3 @@ ul.toc li {
 
 </body>
 </html>
-
