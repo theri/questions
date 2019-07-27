@@ -4,8 +4,8 @@
 
 Path Aware Networking RG                                     B. Trammell
 Internet-Draft                                                    Google
-Intended status: Informational                              May 22, 2019
-Expires: November 23, 2019
+Intended status: Informational                             July 27, 2019
+Expires: January 28, 2020
 
 
                 Open Questions in Path Aware Networking
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on November 23, 2019.
+   This Internet-Draft will expire on January 28, 2020.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Trammell                Expires November 23, 2019               [Page 1]
+Trammell                Expires January 28, 2020                [Page 1]
 
-Internet-Draft                PAN questions                     May 2019
+Internet-Draft                PAN questions                    July 2019
 
 
    the Trust Legal Provisions and are provided without warranty as
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Trammell                Expires November 23, 2019               [Page 2]
+Trammell                Expires January 28, 2020                [Page 2]
 
-Internet-Draft                PAN questions                     May 2019
+Internet-Draft                PAN questions                    July 2019
 
 
    Internet, even over a single physical interface.  When exposed to
@@ -165,9 +165,9 @@ Internet-Draft                PAN questions                     May 2019
 
 
 
-Trammell                Expires November 23, 2019               [Page 3]
+Trammell                Expires January 28, 2020                [Page 3]
 
-Internet-Draft                PAN questions                     May 2019
+Internet-Draft                PAN questions                    July 2019
 
 
 2.2.  Discovery, Distribution, and Trustworthiness of Path Properties
@@ -221,9 +221,9 @@ Internet-Draft                PAN questions                     May 2019
 
 
 
-Trammell                Expires November 23, 2019               [Page 4]
+Trammell                Expires January 28, 2020                [Page 4]
 
-Internet-Draft                PAN questions                     May 2019
+Internet-Draft                PAN questions                    July 2019
 
 
    based not only on the preferences and policies of the application
@@ -277,9 +277,9 @@ Internet-Draft                PAN questions                     May 2019
 
 
 
-Trammell                Expires November 23, 2019               [Page 5]
+Trammell                Expires January 28, 2020                [Page 5]
 
-Internet-Draft                PAN questions                     May 2019
+Internet-Draft                PAN questions                    July 2019
 
 
    provides to its transport and application layers, and the path
@@ -333,9 +333,9 @@ Internet-Draft                PAN questions                     May 2019
 
 
 
-Trammell                Expires November 23, 2019               [Page 6]
+Trammell                Expires January 28, 2020                [Page 6]
 
-Internet-Draft                PAN questions                     May 2019
+Internet-Draft                PAN questions                    July 2019
 
 
    Here the question of apparent versus actual conflicts of intent
@@ -389,9 +389,9 @@ Internet-Draft                PAN questions                     May 2019
 
 
 
-Trammell                Expires November 23, 2019               [Page 7]
+Trammell                Expires January 28, 2020                [Page 7]
 
-Internet-Draft                PAN questions                     May 2019
+Internet-Draft                PAN questions                    July 2019
 
 
    [RFC7624]  Barnes, R., Schneier, B., Jennings, C., Hardie, T.,
@@ -445,4 +445,4 @@ Author's Address
 
 
 
-Trammell                Expires November 23, 2019               [Page 8]
+Trammell                Expires January 28, 2020                [Page 8]
