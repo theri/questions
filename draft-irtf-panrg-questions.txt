@@ -4,22 +4,25 @@
 
 Path Aware Networking RG                                     B. Trammell
 Internet-Draft                                                    Google
-Intended status: Informational                             July 27, 2019
-Expires: January 28, 2020
+Intended status: Informational                          October 15, 2019
+Expires: April 17, 2020
 
 
-                Open Questions in Path Aware Networking
+            Current Open Questions in Path Aware Networking
                    draft-irtf-panrg-questions-latest
 
 Abstract
 
-   This document poses open questions in path-aware networking, as a
-   background for framing discussions in the Path Aware Networking
-   proposed Research Group (PANRG).  Path-aware networking has two
-   aspects: exposing properties of available Internet paths to endpoints
-   and applications running on them, and allowing endpoints and
-   applications to use these properties to select paths through the
-   Internet for their traffic.
+   In contrast to the present Internet architecture, a path-aware
+   internetworking architecture has two important properties: it exposes
+   the properties of available Internet paths to endpoints, and provides
+   for endpoints and applications to use these properties to select
+   paths through the Internet for their traffic.  This document poses
+   questions in path-aware networking open as of 2019, that must be
+   answered in the design, development, and deployment of path-aware
+   intetnetworks.  It was originally written to frame discussions in the
+   Path Aware Networking proposed Research Group (PANRG), and has been
+   published to snapshot current thinking in this space.
 
 Status of This Memo
 
@@ -36,7 +39,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on January 28, 2020.
+   This Internet-Draft will expire on April 17, 2020.
 
 Copyright Notice
 
@@ -47,17 +50,17 @@ Copyright Notice
    Provisions Relating to IETF Documents
    (https://trustee.ietf.org/license-info) in effect on the date of
    publication of this document.  Please review these documents
+
+
+
+Trammell                 Expires April 17, 2020                 [Page 1]
+
+Internet-Draft                PAN questions                 October 2019
+
+
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
    include Simplified BSD License text as described in Section 4.e of
-
-
-
-Trammell                Expires January 28, 2020                [Page 1]
-
-Internet-Draft                PAN questions                    July 2019
-
-
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
@@ -103,17 +106,17 @@ Table of Contents
 
    Path selection provides transparency and control to applications and
    users of the network.  Selection may be made at either the
+
+
+
+Trammell                 Expires April 17, 2020                 [Page 2]
+
+Internet-Draft                PAN questions                 October 2019
+
+
    application layer or the transport layer.  Path control at the packet
    level enables the design of new transport protocols that can leverage
    multipath connectivity across maximally-disjoint paths through the
-
-
-
-Trammell                Expires January 28, 2020                [Page 2]
-
-Internet-Draft                PAN questions                    July 2019
-
-
    Internet, even over a single physical interface.  When exposed to
    applications, or to end-users through a system configuration
    interface, path control allows the specification of constraints on
@@ -162,12 +165,9 @@ Internet-Draft                PAN questions                    July 2019
 
 
 
-
-
-
-Trammell                Expires January 28, 2020                [Page 3]
+Trammell                 Expires April 17, 2020                 [Page 3]
 
-Internet-Draft                PAN questions                    July 2019
+Internet-Draft                PAN questions                 October 2019
 
 
 2.2.  Discovery, Distribution, and Trustworthiness of Path Properties
@@ -221,9 +221,9 @@ Internet-Draft                PAN questions                    July 2019
 
 
 
-Trammell                Expires January 28, 2020                [Page 4]
+Trammell                 Expires April 17, 2020                 [Page 4]
 
-Internet-Draft                PAN questions                    July 2019
+Internet-Draft                PAN questions                 October 2019
 
 
    based not only on the preferences and policies of the application
@@ -277,9 +277,9 @@ Internet-Draft                PAN questions                    July 2019
 
 
 
-Trammell                Expires January 28, 2020                [Page 5]
+Trammell                 Expires April 17, 2020                 [Page 5]
 
-Internet-Draft                PAN questions                    July 2019
+Internet-Draft                PAN questions                 October 2019
 
 
    provides to its transport and application layers, and the path
@@ -333,9 +333,9 @@ Internet-Draft                PAN questions                    July 2019
 
 
 
-Trammell                Expires January 28, 2020                [Page 6]
+Trammell                 Expires April 17, 2020                 [Page 6]
 
-Internet-Draft                PAN questions                    July 2019
+Internet-Draft                PAN questions                 October 2019
 
 
    Here the question of apparent versus actual conflicts of intent
@@ -389,9 +389,9 @@ Internet-Draft                PAN questions                    July 2019
 
 
 
-Trammell                Expires January 28, 2020                [Page 7]
+Trammell                 Expires April 17, 2020                 [Page 7]
 
-Internet-Draft                PAN questions                    July 2019
+Internet-Draft                PAN questions                 October 2019
 
 
 4.2.  Informative References
@@ -445,4 +445,4 @@ Author's Address
 
 
 
-Trammell                Expires January 28, 2020                [Page 8]
+Trammell                 Expires April 17, 2020                 [Page 8]
